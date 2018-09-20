@@ -1,0 +1,24 @@
+# 根据list.txt文件中每个url，通过evernote chrome插件保存
+on run {input, parameters}
+	# Determine the input file's path.
+	set srcFile to ((path to desktop) as text) & "list.txt"
+	
+	# Read lines from file.
+	set lns to paragraphs of (read file srcFile as «class utf8»)
+	
+	tell application "Google Chrome" to activate
+	# Loop over lines read and copy each to the clipboard.
+	repeat with ln in lns
+		open location ln
+		delay 10		
+		tell application "System Events" to keystroke "`"
+		delay 3
+		tell application "System Events" to key code 36 #return
+		delay 9
+
+		tell application "System Events"
+			keystroke "w" using {command down}
+		end tell
+	end repeat
+	
+end run
