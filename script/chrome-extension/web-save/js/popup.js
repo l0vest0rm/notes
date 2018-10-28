@@ -70,7 +70,7 @@ $('#get_web_content').click(() => {
 
 // 显示badge
 $('#show_badge').click(() => {
-	chrome.browserAction.setBadgeText({text: 'New'});
+	chrome.browserAction.setBadgeText({text: 'new'});
 	chrome.browserAction.setBadgeBackgroundColor({color: [255, 0, 0, 255]});
 });
 
