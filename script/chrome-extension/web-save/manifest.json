@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "网页保存",
+    "version": "0.0.1",
+    "description": "保存当前页面到服务器",
+    "icons":
+    {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "browser_action": 
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "页面保存",
+        "default_popup": "popup.html"
+    },
+    "permissions":
+    [
+        "tabs",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "homepage_url": "https://www.baidu.com",
+    "options_ui":
+    {
+        "page": "options.html",
+        "chrome_style": true
+    }
+}
+  
